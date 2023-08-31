@@ -1,5 +1,5 @@
 
-<html lang"en">
+<html lang="en">
 
 <head>
   content charset="UTF-8" //brackets?
@@ -34,11 +34,11 @@ body{
   border-radius: 16px;
   margin: 20px auto;
   box-sizing: border-box;
-  overflow: hidden
+  overflow: hidden;
   font-weight: normal;
 }
 
-.calendar .calendar-inner {
+.calendar-inner {
   padding: 10px 10px
 }
 
@@ -49,16 +49,89 @@ body{
 }
   
 .calendar .calendar-inner .calendar-body div{
-    padding: 40px;
+    padding: 4px;
     min-height: 30px;
     line-height: 30px;
     border: 1px solid transparent;
     margin: 10px 2px 0px;
 }
 
-.calender .calender-inner calender-body divnth-child(-n+7) {
-  border: 1px solid transparent
-  border-bottom: 1px var(--box-color)
+.calender .calender-inner .calender-body div:nth-child(-n+7) {
+  border: 1px solid transparent;
+  border-bottom: 1px solid var(--other-color);
+}
+
+.calendar .calendar-inner .calendar-body div:nth-child(-n+7):hover {
+  border: 1px solid transparent;
+  border-bottom: 1px solid var(--other-color);
+}
+
+.calendar .calendar-inner .calendar-body div>a {
+  color: var(--accent-color);
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+
+.calendar .calendar-inner .cakendar-body div:hover {
+  border: 1px solid var(--main-color);
+}
+
+.calendar .calendar-inner .calendar-body div.empty-dates:hover {
+  border: 1px solid transparent;
+}
+
+.calendar .calendar-inner .calendar-controls {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.calendar .calendar-inner .calendar-today-date {
+  display: grid;
+  text-align: center;
+  cursor: pointer;
+  margin: 3px 0px;
+  background: var(date-color)
+  padding: 8px 0px;
+)
+
+.calendar .calendar-inner .calendar-controls .calendar-year-month {
+  display: flex;
+  min-width: 100px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.calendar .calendar-inner .calendar-controls .calendar-next {
+  text-align: right;
+}
+
+.calendar .calendar-inner .calendar-controls .calendar-year-month .calendar-year-label,
+.calendar .calendar-inner .calendar-controls .calendar-year-month .calendar-month-label {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.calendar .calendar-inner .calendar-body .calendar-today {
+    background: var(--date-colour);
+}
+
+.calendar .calendar-inner .calendar-body .calendar-today:hover {
+    border: 1px solid transparent;
+}
+
+.calendar .calendar-inner .calendar-body .calendar-today a {
+    outline: 2px solid var(--other-colour);
+}
+
+.calendar .calendar-inner .calendar-controls .calendar-next a,
+.calendar .calendar-inner .calendar-controls .calendar-prev a {
+    font-family: consolas, sans-serif;
+    font-size: 26px;
+    text-decoration: none;
+    padding: 4px 12px;
+    display: inline-block;
+    background: var(--accent-colour);
+    margin: 0 0 10px 0;
 }
     
 </style>
